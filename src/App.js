@@ -5,6 +5,8 @@ import Dashboard from "./pages/Dashboard";
 import Main from "./pages/Main";
 import Analitics from "./pages/Analitics";
 import Fintech from "./pages/Fintech";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const activeMenu = true;
@@ -12,22 +14,22 @@ const App = () => {
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
         {activeMenu ? (
-          <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
-            sidebar
+          <div className="w-64 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+            <Sidebar/>
           </div>
         ) : (
           <div className='"w-0 dark:bg-secondary-dark-bg text-red-500'>
-            sidebar
+            <Sidebar/>
           </div>
         )}
       </div>
       <div
         className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
-          activeMenu ? "md:ml-72" : "flex-2"
+          activeMenu ? "md:ml-64" : "flex-2"
         }`}
       >
         <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-          Navbar
+          <Navbar/>
         </div>
         <div>
           <Routes>
