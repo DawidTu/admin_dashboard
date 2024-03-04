@@ -1,21 +1,27 @@
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaReact } from "react-icons/fa6";
 import { LuArrowLeftFromLine } from "react-icons/lu";
 import { LuArrowRightToLine } from "react-icons/lu";
 
 import { links } from "../data/links";
-import { useState } from "react";
+import { useStateContext } from "../contexts/ContextProvider";
 
-const activeLink =
-  "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
-const normalLink =
-  "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md";
 
 const Sidebar = () => {
-  const activeMenu = true;
   const arrowSize = "23px";
   const [isArrowLeft, seIsArrowLeft] = useState(true);
+  const { activeMenu, setActiveMenu, screeSize } = useStateContext();
 
+  const handleCloseSideBar = () => {
+    if (activeMenu !== undefined && screeSize <= 900){
+      setActiveMenu(false);
+    }
+  }
+
+  const activeLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
+  const normalLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md";
+  
   const toggleIcon = () => {
     seIsArrowLeft((LuArrowLeftFromLine) => !LuArrowLeftFromLine);
   };
@@ -25,7 +31,7 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="mx-6 items-center">
-            <Link to="/" className="text-logo">
+            <Link to="/" onClick={handleCloseSideBar} className="text-logo">
               <FaReact className="mt-5 ml-3" size={30} />
             </Link>
             <div className="mt-10 text-main text-sm">
@@ -38,7 +44,7 @@ const Sidebar = () => {
                     <NavLink
                       to={`/${link.name}`}
                       key={link.name}
-                      onClick={() => {}}
+                      onClick={handleCloseSideBar}
                       className={({ isActive }) =>
                         isActive ? activeLink : normalLink
                       }
@@ -50,7 +56,7 @@ const Sidebar = () => {
                 </div>
               ))}
               <div className="flex text-main justify-end items-center mt-10">
-                <button onClick={toggleIcon}>
+                <button onClick={() => { toggleIcon(); setActiveMenu(false); }}>
                   {isArrowLeft ? (
                     <LuArrowLeftFromLine size={arrowSize} />
                   ) : (

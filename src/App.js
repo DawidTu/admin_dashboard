@@ -7,9 +7,14 @@ import Analitics from "./pages/Analitics";
 import Fintech from "./pages/Fintech";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import { useStateContext } from "./contexts/ContextProvider";
+import Ecommerce from "./pages/Ecommerce";
+import Comunity from "./pages/Comunity";
+import Finance from "./pages/Finance";
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
+
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -18,7 +23,7 @@ const App = () => {
             <Sidebar/>
           </div>
         ) : (
-          <div className='"w-0 dark:bg-secondary-dark-bg text-red-500'>
+          <div className='"w-0 dark:bg-secondary-dark-bg'>
             <Sidebar/>
           </div>
         )}
@@ -38,6 +43,12 @@ const App = () => {
               <Route path="main" element={<Main />} />
               <Route path="analitics" element={<Analitics />} />
               <Route path="fintech" element={<Fintech />} />
+            </Route>
+            <Route path="/ecommerce" element={<Ecommerce/>}>
+            </Route>
+            <Route path="/comunity" element={<Comunity/>}>
+            </Route>
+            <Route path="/finance" element={<Finance/>}>
             </Route>
           </Routes>
         </div>
