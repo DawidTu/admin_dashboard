@@ -2,20 +2,12 @@ import React from "react";
 import {
   AiOutlineCalendar,
   AiOutlineShoppingCart,
-  AiOutlineAreaChart,
-  AiOutlineBarChart,
-  AiOutlineStock,
   AiOutlineShop,
   AiOutlineDashboard,
 } from "react-icons/ai";
 import {
   FiShoppingBag,
-  FiEdit,
-  FiPieChart,
-  FiBarChart,
-  FiCreditCard,
   FiStar,
-  FiShoppingCart,
 } from "react-icons/fi";
 import { IoIosSettings } from "react-icons/io";
 import { IoPeopleSharp, IoLogoWebComponent } from "react-icons/io5";

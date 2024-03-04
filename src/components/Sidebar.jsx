@@ -30,7 +30,7 @@ const Sidebar = () => {
     <div className="bg-sidepanel h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (
         <>
-          <div className="mx-6 items-center">
+          <div className="mx-3 items-center">
             <Link to="/" onClick={handleCloseSideBar} className="text-logo">
               <FaReact className="mt-5 ml-3" size={30} />
             </Link>
