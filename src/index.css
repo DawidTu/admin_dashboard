@@ -2,11 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-body{
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
-    overflow: hidden;
-}    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.main {
+  display: flex;
+}
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  background-color: rgb(30, 41, 59);
+}
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+.container {
+  flex: 1;
+  margin-left: 260px;
+}
+@layer base {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .h1 {
+    @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-light;
+  }
+  .h2 {
+    @apply text-4xl font-light;
+  }
+  .h3 {
+    @apply text-3xl font-light;
+  }
+  .h4 {
+    @apply text-2xl font-light;
+  }
+}

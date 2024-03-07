@@ -12,6 +12,7 @@ module.exports = {
       },
       backgroundColor: {
         'main-bg': '#FAFBFB',
+        'main-color': 'rgb(99 102 241)',
         'main-dark-bg': '#20232A',
         'secondary-dark-bg': '#33373E',
         'light-gray': '#F7F7F7',
@@ -21,7 +22,7 @@ module.exports = {
       },
       textColor: {
         'main': 'rgb(226, 232, 240)',
-        'subtitle': 'rgb(156 163 175)',
+        'subtitle': 'rgb(229, 231, 235)',
         'logo': 'rgb(99 102 241)',
       },
       borderWidth: {
@@ -29,10 +30,6 @@ module.exports = {
       },
       borderColor: {
         color: 'rgba(0, 0, 0, 0.1)',
-      },
-      backgroundImage: {
-        'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
       },
     },
   },
