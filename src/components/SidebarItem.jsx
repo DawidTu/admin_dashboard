@@ -36,7 +36,7 @@ const SidebarItem = ({ item }) => {
   } else {
     return (
       <span className="flex mt-3 text-gray-300">
-        <Link to={item.path} className={`flex gap-x-4 ${item.children ? 'text-sm' : ''}`}>
+        <Link to={item.path} className={`flex gap-x-4 mt-1 ${item.children ? 'text-sm' : ''}`}>
           {item.icon}
           {item.title}
         </Link>

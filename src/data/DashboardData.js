@@ -2,6 +2,13 @@ import Arrow1 from './svg/arrow1.svg';
 import Arrow2 from './svg/arrow2.svg';
 import Arrow3 from './svg/arrow3.svg';
 import { BsThreeDots } from "react-icons/bs";
+import { FiMessageCircle } from "react-icons/fi";
+import { MdSaveAlt } from "react-icons/md";
+import { HiMiniArrowsRightLeft } from "react-icons/hi2";
+import { TbArrowsShuffle } from "react-icons/tb";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+import { RxCircleBackslash } from "react-icons/rx";
 
 export const DashboardData = [
     {
@@ -62,6 +69,72 @@ export const DashboardDataSalesRefunds = [
         h2: 'Sales VS Refunds',
         dollar: '+$6,796',
         bage: '-34%',
+    },
+]
+export const DashboardDataRecentActivity = [
+    {
+        icon: <FiMessageCircle/>,
+        text: 'Nick Mark mentioned Sara Smith in a new post',
+        btn: 'View',
+        btnArrow: <FaArrowRight/>,
+    },
+    {
+        icon: <MdSaveAlt/>,
+        text: 'The post Post Name was removed by Nick Mark',
+        btn: 'View',
+        btnArrow: <FaArrowRight/>,
+    },
+    {
+        icon: <HiMiniArrowsRightLeft/>,
+        text: 'Patrick Sullivan published a new post',
+        btn: 'View',
+        btnArrow: <FaArrowRight/>,
+    },
+]
+export const DashboardDataRecentActivityYesterday = [
+    {
+        icon: <TbArrowsShuffle/>,
+        text: '240+ users have subscribed to Newsletter #1',
+        btn: 'View',
+        btnArrow: <FaArrowRight/>,
+    },
+    {
+        icon: <FiMessageCircle/>,
+        text: 'The post Post Name was suspended by Nick Mark',
+        btn: 'View',
+        btnArrow: <FaArrowRight/>,
+    },
+]
+export const DashboardDataIncome = [
+    {
+        icon: <FaArrowLeft/>,
+        text: 'Qonto billing',
+        dollar: '-$49.88',
+    },
+    {
+        icon: <FaArrowRight/>,
+        text: 'Cruip.com Market Ltd 70 Wilson St London',
+        dollar: '+249.88',
+    },
+    {
+        icon: <FaArrowRight/>,
+        text: 'Notion Labs Inc',
+        dollar: '+99.99',
+    },
+    {
+        icon: <FaArrowRight/>,
+        text: 'Market Cap Ltd',
+        dollar: '+1,200.88',
+    },
+    {
+        icon: <RxCircleBackslash/>,
+        text: 'App.com Market Ltd 70 Wilson St London',
+        dollar: '+$99.99',
+    },
+    {
+        icon: <FaArrowLeft/>,
+        text: 'App.com Market Ltd 70 Wilson St London',
+        dollar: '-$49.88',
     },
 ]
 

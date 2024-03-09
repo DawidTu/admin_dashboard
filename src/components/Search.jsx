@@ -5,7 +5,7 @@ import { SearchDataMessage } from "../data/SearchData";
 
 const Search = () => {
   return (
-    <div className="nav-item absolute right-[370px] top-20 bg-white border dark:bg-[#42464D] p-4 rounded-md w-[650px]">
+    <div className="nav-item fixed z-10 right-[580px] top-20 bg-white border dark:bg-[#42464D] p-4 rounded-md w-[650px]">
       <div className="flex items-center gap-x-3 border-b pb-2">
         <RiSearch2Line className="text-xl text-gray-400" />
         <input

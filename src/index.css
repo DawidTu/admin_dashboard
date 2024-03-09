@@ -31,7 +31,6 @@ body {
   width: 0;
 }
 .container {
-  flex: 1;
   margin-left: 260px;
 }
 @layer base {

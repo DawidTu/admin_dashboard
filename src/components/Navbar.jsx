@@ -20,11 +20,11 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       type="button"
       onClick={() => customFunc()}
       style={{ color }}
-      className="relative text-xl rounded-full p-3 hover:bg-gray-400"
+      className="relative text-lg rounded-full p-2 hover:bg-slate-300 bg-slate-200"
     >
       <span
         style={{ background: dotColor }}
-        className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
+        className="absolute inline-flex rounded-full h-1.5 w-1.5 right-1 top-0.5"
       />
       {icon}
     </button>
@@ -85,16 +85,16 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div ref={ref} className="border-b">
-      <div className="flex justify-between p-2 md:mx-6 relative">
+    <div ref={ref} className="pl-[260px] border-b">
+      <div className="flex items-center justify-between p-2 md:mx-6 relative">
         <NavButton
           title="Menu"
           customFunc={handleActiveMenu}
           color={currentColor}
           icon={<AiOutlineMenu />}
         />
-        <div className="flex gap-x-5">
-          <div className="bg-gray-300 rounded-full">
+        <div className="flex gap-x-5 items-center">
+          <div>
             <NavButton
               title="Search"
               customFunc={() => handleClick("search")}
@@ -102,7 +102,7 @@ const Navbar = () => {
               icon={<RiSearch2Line />}
             />
           </div>
-          <div className="bg-gray-300 rounded-full">
+          <div>
             <NavButton
               title="Chat"
               dotColor="red"
@@ -111,7 +111,7 @@ const Navbar = () => {
               icon={<PiChatsCircleFill />}
             />
           </div>
-          <div className="bg-gray-300 rounded-full">
+          <div>
             <NavButton
               title="Help"
               customFunc={() => handleClick("help")}
