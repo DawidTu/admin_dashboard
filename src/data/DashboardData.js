@@ -77,18 +77,21 @@ export const DashboardDataRecentActivity = [
         text: 'Nick Mark mentioned Sara Smith in a new post',
         btn: 'View',
         btnArrow: <FaArrowRight/>,
+        color: 'purple',
     },
     {
         icon: <MdSaveAlt/>,
         text: 'The post Post Name was removed by Nick Mark',
         btn: 'View',
         btnArrow: <FaArrowRight/>,
+        color: 'red',
     },
     {
         icon: <HiMiniArrowsRightLeft/>,
         text: 'Patrick Sullivan published a new post',
         btn: 'View',
         btnArrow: <FaArrowRight/>,
+        color: 'green',
     },
 ]
 export const DashboardDataRecentActivityYesterday = [
@@ -97,12 +100,14 @@ export const DashboardDataRecentActivityYesterday = [
         text: '240+ users have subscribed to Newsletter #1',
         btn: 'View',
         btnArrow: <FaArrowRight/>,
+        color: 'blue',
     },
     {
         icon: <FiMessageCircle/>,
         text: 'The post Post Name was suspended by Nick Mark',
         btn: 'View',
         btnArrow: <FaArrowRight/>,
+        color: 'purple',
     },
 ]
 export const DashboardDataIncome = [
@@ -110,31 +115,37 @@ export const DashboardDataIncome = [
         icon: <FaArrowLeft/>,
         text: 'Qonto billing',
         dollar: '-$49.88',
+        color: 'red',
     },
     {
         icon: <FaArrowRight/>,
         text: 'Cruip.com Market Ltd 70 Wilson St London',
         dollar: '+249.88',
+        color: 'green',
     },
     {
         icon: <FaArrowRight/>,
         text: 'Notion Labs Inc',
         dollar: '+99.99',
+        color: 'green',
     },
     {
         icon: <FaArrowRight/>,
         text: 'Market Cap Ltd',
         dollar: '+1,200.88',
+        color: 'green',
     },
     {
         icon: <RxCircleBackslash/>,
         text: 'App.com Market Ltd 70 Wilson St London',
         dollar: '+$99.99',
+        color: 'gray'
     },
     {
         icon: <FaArrowLeft/>,
         text: 'App.com Market Ltd 70 Wilson St London',
         dollar: '-$49.88',
+        color: 'red',
     },
 ]
 

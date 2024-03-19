@@ -9,10 +9,10 @@ import BarChart from "../Charts/BarChart";
 
 const FourthMainSection = () => {
   return (
-    <div className="flex gap-x-7 mt-8">
+    <div className="flex flex-wrap xl:flex-nowrap gap-y-7 gap-x-7 mt-8">
       {DashboardDataSales.map((data, index) => {
         return (
-          <div className="w-full border p-5" key={index}>
+          <div className="w-full border p-5 bg-box" key={index}>
             <h2 className="w-full border-b pb-5 font-bold">{data.h2}</h2>
             <div className="flex mt-5 gap-x-8">
               <div className="flex w-full justify-between items-center">
@@ -23,8 +23,14 @@ const FourthMainSection = () => {
                   </span>
                 </div>
                 <div className="flex gap-x-3">
-                  <span>{data.current}</span>
-                  <span>{data.previous}</span>
+                  <div className="flex items-center">
+                    <span className="block w-3 h-3 rounded-full mr-2 border-[3px] border-[#6366f1]" />
+                    <span>{data.current}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="block w-3 h-3 rounded-full mr-2 border-[3px] border-[#60a5fa]" />
+                    <span>{data.previous}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -36,10 +42,10 @@ const FourthMainSection = () => {
       })}
       {DashboardDataSalesRefunds.map((data, index) => {
         return (
-          <div className="w-full border p-5" key={index}>
+          <div className="w-full border p-5 bg-box" key={index}>
             <h2 className="w-full flex items-center gap-x-3 border-b pb-5 font-bold">
               {data.h2}
-              <span className="text-gray-400">
+              <span className="text-sidebar-text">
                 <BsExclamationCircleFill />
               </span>
             </h2>

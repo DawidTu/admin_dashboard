@@ -54,7 +54,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize <= 900) {
+    if (screenSize <= 768) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -85,14 +85,12 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div ref={ref} className="pl-[260px] border-b">
-      <div className="flex items-center justify-between p-2 md:mx-6 relative">
-        <NavButton
-          title="Menu"
-          customFunc={handleActiveMenu}
-          color={currentColor}
-          icon={<AiOutlineMenu />}
-        />
+    <div ref={ref} className="border-b fixed w-full bg-white z-10">
+      <div className="z-10 flex items-center justify-between p-2 px-5 md:mx-6 relative">
+        <button className="text-gray-500" onClick={handleActiveMenu}>
+          <AiOutlineMenu size={20}/>
+        </button>
+        
         <div className="flex gap-x-5 items-center">
           <div>
             <NavButton
@@ -122,19 +120,19 @@ const Navbar = () => {
           <div className="border h-7 mt-2"></div>
           <TooltipComponent content="Profile" position="BottomCenter">
             <div
-              className="flex items-center gap-2 cursor-pointer p-1"
+              className="flex items-center gap-2 cursor-pointer p-1 relative"
               onClick={() => handleClick("userProfile")}
             >
               <div className="justify-center items-center rounded-full bg-sidepanel">
                 <img className="p-2 w-9 h-9" src={Arrow1} alt="user-profile" />
               </div>
               <p>
-                <span className="text-gray-400 text-14">Acme</span>{" "}
-                <span className="text-gray-400 font-bold ml-1 text-14">
+                <span className="text-sidebar-text text-14">Acme</span>{" "}
+                <span className="text-sidebar-text font-bold ml-1 text-14">
                   Inc.
                 </span>
               </p>
-              <MdKeyboardArrowDown className="text-gray-400 text-16" />
+              <MdKeyboardArrowDown className="text-sidebar-text text-16" />
             </div>
           </TooltipComponent>
 

@@ -8,15 +8,17 @@ import { Link } from "react-router-dom";
 
 const FifthMainSection = () => {
   return (
-    <div className="flex gap-x-7 mt-8">
-      <div className="w-full border p-5">
+    <div className="flex flex-wrap xl:flex-nowrap gap-y-7 gap-x-7 mt-8">
+      <div className="w-full border p-5 bg-box">
         <h2 className="w-full border-b pb-2 font-bold">Recent Activity</h2>
-        <h3 className="uppercase text-gray-400 w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
           Today
         </h3>
         {DashboardDataRecentActivity.map((data, index) => {
           const isMiddleElement =
             index !== DashboardDataRecentActivity.length - 1;
+
+          const iconClass = `bg-${data.color}-600 rounded-full p-3 text-white`;
 
           return (
             <div
@@ -26,9 +28,7 @@ const FifthMainSection = () => {
               }`}
             >
               <div className="flex gap-x-3 items-center mt-5">
-                <span className="bg-main-color rounded-full p-3 text-white">
-                  {data.icon}
-                </span>
+                <span className={iconClass}>{data.icon}</span>
                 <p>{data.text}</p>
               </div>
               <div>
@@ -43,13 +43,14 @@ const FifthMainSection = () => {
             </div>
           );
         })}
-        <h3 className="uppercase text-gray-400 w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
           Yesterday
         </h3>
         {DashboardDataRecentActivityYesterday.map((data, index) => {
           const isMiddleElement =
             index !== DashboardDataRecentActivityYesterday.length - 1;
 
+          const iconClass = `bg-${data.color}-600 rounded-full p-3 text-white`;
           return (
             <div
               key={index}
@@ -58,9 +59,7 @@ const FifthMainSection = () => {
               }`}
             >
               <div className="flex gap-x-3 items-center mt-5">
-                <span className="bg-main-color rounded-full p-3 text-white">
-                  {data.icon}
-                </span>
+                <span className={iconClass}>{data.icon}</span>
                 <p>{data.text}</p>
               </div>
               <div>
@@ -77,28 +76,30 @@ const FifthMainSection = () => {
         })}
       </div>
 
-      <div className="w-full border p-5">
+      <div className="w-full border p-5 bg-box">
         <h2 className="w-full border-b pb-2 font-bold">Income/Expenses</h2>
-        <h3 className="uppercase text-gray-400 w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
           Today
         </h3>
         {DashboardDataIncome.map((data, index) => {
-          const isMiddleElement = index !== DashboardDataIncome.length - 1;
+          const isMiddleElement = index >= 1 && index <= 3;
+          const isMiddleUnderlineElement = index !== DashboardDataIncome.length - 1;
+          const isLastElement = index === DashboardDataIncome.length - 2;
+
+          const iconClass = `bg-${data.color}-600 rounded-full p-3 text-white`;
 
           return (
             <div
               key={index}
-              className={`flex justify-between items-center pb-1${
-                isMiddleElement ? " border-b" : ""
+              className={`flex justify-between items-center pb-1 ${
+                isMiddleUnderlineElement ? " border-b" : ""
               }`}
             >
               <div className="flex gap-x-3 items-center mt-5">
-                <span className="bg-main-color rounded-full p-3 text-white">
-                  {data.icon}
-                </span>
+                <span className={iconClass}>{data.icon}</span>
                 <p>{data.text}</p>
               </div>
-              <div className="text-green-500">{data.dollar}</div>
+              <div className={`text-black ${isMiddleElement ? "text-green-600" : ""} ${isLastElement ? "line-through" : ""}`}>{data.dollar}</div>
             </div>
           );
         })}

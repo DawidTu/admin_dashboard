@@ -75,8 +75,8 @@ export default class Example extends PureComponent {
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            cx="40%"
-            cy="55%"
+            cx="48%"
+            cy="60%"
             innerRadius={60}
             outerRadius={80}
             fill="#3F00FF"

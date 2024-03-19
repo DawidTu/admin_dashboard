@@ -21,17 +21,39 @@ body {
 }
 .sidebar {
   width: 260px;
-  flex-shrink: 0;
   height: 100vh;
   position: fixed;
   overflow-y: scroll;
   background-color: rgb(30, 41, 59);
+  z-index: 100;
+}
+.active-link {
+  color: rgb(99, 102, 241);
+}
+.sidebar-closed {
+  width: 0;
+  transition: width 0.3s ease; /* Alebo transform, podľa potreby */
+}
+.sidebar-open {
+  width: 260px;
+  overflow: hidden;
+  transition: width 0.3s ease; /* Alebo transform, podľa potreby */
 }
 .sidebar::-webkit-scrollbar {
   width: 0;
 }
 .container {
   margin-left: 260px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-icon {
+  animation: spin 1s infinite linear;
+}
+.disabled{
+  cursor: not-allowed;
 }
 @layer base {
   body::-webkit-scrollbar {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const FilterData = () => {
   return (
-    <div className='nav-item absolute right-4 2xl:right-8 top-16 bg-white border dark:bg-[#42464D] p-4 rounded-sm w-52'>
+    <div className='z-10 absolute right-[430px] 2xl:right-8 top-72 bg-white border dark:bg-[#42464D] p-4 rounded-sm w-52'>
       <div className='mb-3 gap-y-1'>
         <p className='font-bold text-xl'>Acme Inc.</p>
         <i className='text-sm'>Administrátor</i>

@@ -19,8 +19,9 @@ import { PiCirclesFour } from "react-icons/pi";
 import { CgComponents } from "react-icons/cg";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowUpSLine } from "react-icons/ri";
+import Badge from "../components/Badge";
 
-const iconSize = "24px";
+const iconSize = "22px";
 
 export const SidebarData = [
   
@@ -48,7 +49,7 @@ export const SidebarData = [
       },
       {
         title: "E-commerce",
-        path: "/ecommerce",
+        path: "/customers",
         icon: <AiOutlineShop size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -98,7 +99,7 @@ export const SidebarData = [
       },
       {
         title: "Comunity",
-        path: "/comunity",
+        path: "/usersTabs",
         icon: <IoPeopleSharp size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -140,7 +141,7 @@ export const SidebarData = [
       },
       {
         title: "Finance",
-        path: "/finance",
+        path: "/cards",
         icon: <FaChartPie size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -162,7 +163,7 @@ export const SidebarData = [
       },
       {
         title: "Job Board",
-        path: "/jobBoard",
+        path: "/listing",
         icon: <FiShoppingBag size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -184,7 +185,7 @@ export const SidebarData = [
       },
       {
         title: "Tasks",
-        path: "/tasks",
+        path: "/kanban",
         icon: <FaTasks size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -204,6 +205,7 @@ export const SidebarData = [
         title: "Messages",
         path: "/messages",
         icon: <TiMessages size={iconSize} />,
+        badge: <Badge value="4" color="main-color"/>,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
       },
@@ -230,7 +232,7 @@ export const SidebarData = [
       },
       {
         title: "Settings",
-        path: "/settings",
+        path: "/myaccount",
         icon: <IoIosSettings size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -264,7 +266,7 @@ export const SidebarData = [
       },
       {
         title: "Utility",
-        path: "/utility",
+        path: "/changelog",
         icon: <PiCirclesFour size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -288,7 +290,7 @@ export const SidebarData = [
           },
           {
             title: "404",
-            path: "/404",
+            path: "404",
           },
           {
             title: "Knowledge Base",
@@ -302,7 +304,7 @@ export const SidebarData = [
     export const secondData = [
       {
         title: "Authentication",
-        path: "/authentication",
+        path: "/signIn",
         icon: <AiOutlineShoppingCart size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -324,7 +326,7 @@ export const SidebarData = [
       },
       {
         title: "Oboarding",
-        path: "/oboarding",
+        path: "/step1",
         icon: <CgComponents size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -350,7 +352,7 @@ export const SidebarData = [
       },
       {
         title: "Components",
-        path: "/components",
+        path: "/button",
         icon: <IoLogoWebComponent size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,

@@ -6,7 +6,6 @@ import Analytics from "./pages/Dashboard/Analytics";
 import Fintech from "./pages/Dashboard/Fintech";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
-import { useStateContext } from "./contexts/ContextProvider";
 import Messages from "./pages/Messages";
 import Calendar from "./pages/Calendar";
 import Inbox from "./pages/Inbox";
@@ -61,18 +60,16 @@ import InputForm from "./pages/Components/InputForm";
 import Dropdown from "./pages/Components/Dropdown";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
-
   return (
     <BrowserRouter>
-      <div className="main dark:bg-main-dark-bg">
+      <div className="main bg-main-bg dark:bg-main-dark-bg">
         <Sidebar />
 
         <div className="w-full">
-          <div className="md:static bg-main-bg dark:bg-main-dark-bg">
+          <div className="md:static bg-box dark:bg-main-dark-bg">
             <Navbar />
           </div>
-          <div className="ml-[260px]">
+          <div className="md:ml-[260px]">
             <div className="p-8 2xl:px-24">
               {/* Content */}
               <Routes>
@@ -141,19 +138,10 @@ const App = () => {
                 <Route path="roadmap" element={<Roadmap />} />
                 <Route path="fAQs" element={<FAQs />} />
                 <Route path="emptyState" element={<EmptyState />} />
-                <Route path="error404" element={<Error404 />} />
+                <Route path="*" element={<Error404 />} />
                 <Route path="knowledgeBase" element={<KnowledgeBase />} />
 
-                {/* Authentication */}
-                <Route path="signIn" element={<SignIn />} />
-                <Route path="signUp" element={<SignUp />} />
-                <Route path="resetPassword" element={<ResetPassword />} />
-
-                {/* Oboarding */}
-                <Route path="step1" element={<Step1 />} />
-                <Route path="step2" element={<Step2 />} />
-                <Route path="step3" element={<Step3 />} />
-                <Route path="step4" element={<Step4 />} />
+               
 
                 {/* Components */}
                 <Route path="button" element={<Button />} />
