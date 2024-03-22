@@ -27,7 +27,7 @@ export const SidebarData = [
   
       {
         title: "Dashboard",
-        path: "/",
+        path: "/:id",
         icon: <AiOutlineDashboard size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -49,7 +49,7 @@ export const SidebarData = [
       },
       {
         title: "E-commerce",
-        path: "/customers",
+        path: "/customers/:id",
         icon: <AiOutlineShop size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -99,7 +99,7 @@ export const SidebarData = [
       },
       {
         title: "Comunity",
-        path: "/usersTabs",
+        path: "/usersTabs/:id",
         icon: <IoPeopleSharp size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -141,7 +141,7 @@ export const SidebarData = [
       },
       {
         title: "Finance",
-        path: "/cards",
+        path: "/cards/:id",
         icon: <FaChartPie size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -163,7 +163,7 @@ export const SidebarData = [
       },
       {
         title: "Job Board",
-        path: "/listing",
+        path: "/listing/:id",
         icon: <FiShoppingBag size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -185,7 +185,7 @@ export const SidebarData = [
       },
       {
         title: "Tasks",
-        path: "/kanban",
+        path: "/kanban/:id",
         icon: <FaTasks size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -232,41 +232,40 @@ export const SidebarData = [
       },
       {
         title: "Settings",
-        path: "/myaccount",
+        path: "/userPage/:id",
         icon: <IoIosSettings size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
-
         children: [
           {
             title: "My Account",
-            path: "/myaccount",
+            path: "/userPage/settingsaccount",
           },
           {
             title: "My Notifications",
-            path: "/myNotifications",
+            path: "/userPage/settingsnotifications",
           },
           {
             title: "Connected Apps",
-            path: "/connesctedApps",
+            path: "/userPage/settingsconnect",
           },
           {
             title: "Plans",
-            path: "/plans",
+            path: "/userPage/settingsplan",
           },
           {
             title: "Billing & Invoices",
-            path: "/billingInvoices",
+            path: "/userPage/settingsbilling",
           },
           {
             title: "Give Feedback",
-            path: "/giveFeedback",
+            path: "/userPage/settingsfeed",
           },
         ]
       },
       {
         title: "Utility",
-        path: "/changelog",
+        path: "/changelog/:id",
         icon: <PiCirclesFour size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -304,7 +303,7 @@ export const SidebarData = [
     export const secondData = [
       {
         title: "Authentication",
-        path: "/signIn",
+        path: "/signIn/:id",
         icon: <AiOutlineShoppingCart size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -326,7 +325,7 @@ export const SidebarData = [
       },
       {
         title: "Oboarding",
-        path: "/step1",
+        path: "/step1/:id",
         icon: <CgComponents size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,
@@ -369,6 +368,14 @@ export const SidebarData = [
           {
             title: "Dropdown",
             path: "/dropdown",
+          },
+          {
+            title: "Icons",
+            path: "/icons",
+          },
+          {
+            title: "Badge",
+            path: "/badgePage",
           },
         ]
       },

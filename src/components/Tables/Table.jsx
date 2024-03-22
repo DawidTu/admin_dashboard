@@ -1,8 +1,7 @@
 import React from "react";
-import { useTable } from "react-table";
-import { TableData } from "../data/TableData";
+import { TableData } from "../../data/TableData";
 
-const TableComponent = ({ columns, data }) => {
+const TableComponent = () => {
   return (
     <table className="w-full">
       <thead className="uppercase text-xs xl:text-sm text-sidebar-text bg-gray-100 h-10">

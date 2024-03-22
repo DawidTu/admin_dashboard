@@ -1,6 +1,6 @@
 import React from "react";
 import PieChart from "../Charts/PieChart";
-import TableComponent from "../Table";
+import TableComponent from "../Tables/Table";
 
 const ThirdMainSection = () => {
     
@@ -12,7 +12,7 @@ const ThirdMainSection = () => {
           <PieChart />
         </div>
       </div>
-      <div className="border p-5 xl:w-2/3 bg-box">
+      <div className="border p-5 w-full xl:w-2/3 bg-box">
         <h2 className="w-full border-b pb-2 font-bold">Top Channels</h2>
         <div className="mt-2 w-full">
           <TableComponent />

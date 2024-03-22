@@ -2,7 +2,11 @@ import React from 'react'
 
 const Cart2 = () => {
   return (
-    <div>Cart2</div>
+    <div className="mt-14 mx-auto">
+      <div className="flex justify-between mb-8">
+        <h3 className="h3 font-semibold">Cart (3) ✨</h3>
+      </div>
+    </div>
   )
 }
 

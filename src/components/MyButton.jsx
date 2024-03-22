@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Button = ({ customColor, color, backgroundColor, size, icon, text, group, type }) => {
-  // Funkcia na zistenie tried pre tlačidlo
+const Button = ({ customColor, color, backgroundColor, size, icon, text, group, type, onClick, onSubmit }) => {
   const getButtonClasses = () => {
-    let classes = 'inline-flex items-center justify-center border border-gray-200 hover:border-gray-300 rounded-[4px] shadow-sm outline-none';
+    let classes = 'inline-flex items-center justify-center hover:border-gray-300 rounded-[4px] border shadow-sm outline-none';
     
     // Nastavenie farby písma
     if (customColor) {
@@ -34,7 +33,7 @@ const Button = ({ customColor, color, backgroundColor, size, icon, text, group, 
   };
 
   return (
-    <button className={getButtonClasses()} disabled={type === 'disabled'} style={{ cursor: type === 'disabled' ? 'not-allowed' : 'pointer' }}>
+    <button onClick={onClick} onSubmit={onSubmit} className={getButtonClasses()} disabled={type === 'disabled'} style={{ cursor: type === 'disabled' ? 'not-allowed' : 'pointer' }}>
       {/* Ikonka */}
       {icon && <span className={text ? "mr-2" : ""}>{icon}</span>}
       
@@ -46,7 +45,7 @@ const Button = ({ customColor, color, backgroundColor, size, icon, text, group, 
 
       {/* Group Button */}
       {group && (
-        <div className="flex border-none">
+        <div className="flex border-none flex-nowrap">
           <button text={text} />
           <button text={text} />
           <button text={text} />

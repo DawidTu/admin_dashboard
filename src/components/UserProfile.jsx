@@ -10,8 +10,8 @@ const UserProfile = () => {
       </div>
       <hr />
       <div className='flex flex-col mt-3 gap-y-2 text-logo'>
-        <Link to="myaccount">Settings</Link>
-        <Link to="/">Sign Out</Link>
+        <Link to="/userPage/settingsaccount">Settings</Link>
+        <Link to="/signIn">Sign Out</Link>
       </div>
     </div>
   )

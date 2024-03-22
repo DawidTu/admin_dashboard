@@ -1,5 +1,4 @@
 import React from "react";
-import MyButton from "../MyButton";
 import {
   MyNotificationDataGeneral,
   MyNotificationDataShares,
@@ -9,10 +8,10 @@ const SettingsNotification = () => {
   return (
     <div>
       <h1 className="text-xl font-bold">My Notifications</h1>
-      <div className="mt-3">
+      <div className="mt-5">
         {MyNotificationDataGeneral.map((item, index) => {
           return (
-            <div key={index} className="border-b">
+            <div key={index}>
               <h1 className="text-lg font-bold mb-3">{item.mainTitle}</h1>
               <div className="flex justify-between items-center mb-5">
                 <div>
@@ -30,12 +29,12 @@ const SettingsNotification = () => {
               <div key={index} className="border-b">
                 <h1 className="text-lg font-bold mb-3">{item.mainTitle}</h1>
                 <div className="flex justify-between items-center my-5">
-                  <div>
+                  <div className="pr-12">
                     <h1 className="text-sm font-semibold">{item.title}</h1>
                     <p className="text-xs text-gray-400">{item.text}</p>
                   </div>
-                  <div>
-                    <span className="italic text-sm mr-2 text-gray-300 items-center">
+                  <div className="flex items-center">
+                    <span className="italic hidden md:block text-sm mr-2 text-gray-300 items-center">
                       {item.smText}
                     </span>
                     {item.button}
@@ -44,20 +43,6 @@ const SettingsNotification = () => {
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-5 flex float-right">
-          <span className="mr-2">
-            <MyButton size="medium" text="Cancel" />
-          </span>
-          <span>
-            <MyButton
-              size="medium"
-              backgroundColor="main-color"
-              customColor="white"
-              text="Save Chamges"
-            />
-          </span>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import MyButton from "../MyButton";
 import {
   settingsBillingData,
   settingsInvoicesData,
@@ -29,7 +28,7 @@ const SettingsBilling = () => {
             </div>
           ))}
         </div>
-        <div className="mt-8 mb-4 border-b pb-7">
+        <div className="mt-8 mb-4">
           {settingsInvoicesData.map((item, index) => (
             <div>
               <h2 className="font-semibold text-xl">{item.h1}</h2>
@@ -60,19 +59,6 @@ const SettingsBilling = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-4 float-right">
-        <span className="mr-2">
-          <MyButton size="medium" text="Cancel" />
-        </span>
-        <span>
-          <MyButton
-            size="medium"
-            backgroundColor="main-color"
-            customColor="white"
-            text="Save Chamges"
-          />
-        </span>
       </div>
     </div>
   );

@@ -21,19 +21,19 @@ const SidebarItem = ({ item, activeParent }) => {
   return (
     <div
       className={`pb-1 py-4 text-white ${
-        (isActive || activeParent) ? "text-logo rounded-sm bg-blue" : ""
+        (isActive || activeParent) ? "text-logo" : ""
       }`}
     >
       {item.children ? (
         <div
-          className={`flex justify-between transition-all ease-in-out duration-300 ${
-            (isActive || activeParent) ? "" : "text-gray-300"
+          className={`pl-3 items-center flex justify-between transition-all ease-in-out duration-300 ${
+            (isActive || activeParent || isOpen) ? "bg-[#0f172a] pt-1" : "text-gray-300"
           }`}
           onClick={handleToggle}
         >
           <div className="flex items-center">
-            <div className="flex text-sm gap-x-4 text-gray-300 ">
-              <Link className={(isActive || activeParent) ? "text-logo" : ""}>{item.icon}</Link>
+            <div className="flex gap-x-4 text-gray-300 cursor-pointer">
+              <Link className={(isOpen || isActive) ? "text-logo" : ""}>{item.icon}</Link>
               <span>{item.title}</span>
             </div>
           </div>
@@ -44,7 +44,7 @@ const SidebarItem = ({ item, activeParent }) => {
       ) : (
         <Link
           to={item.path}
-          className={`flex w-full justify-between  ${
+          className={`items-center flex pl-3 w-full justify-between cursor-pointer ${
             (isActive || activeParent) ? "text-logo" : "text-gray-300"
           }`}
         >
@@ -52,14 +52,14 @@ const SidebarItem = ({ item, activeParent }) => {
             <span>{item.icon}</span>
             <span>{item.title}</span>
           </div>
-          <span className="mr-3">{item.badge}</span>
+          <span className="text-xs mr-3 bg-indigo-500 text-white rounded-md">{item.badge}</span>
         </Link>
       )}
 
       {isOpen && item.children && (
-        <div className="text-sidebar-text hover:text-white flex flex-col items-start">
+        <div className={`text-sidebar-text hover:text-white flex flex-col items-start ${isOpen || isActive ? "bg-[#0f172a] pt-1" : ""}`}>
           {item.children.map((child, index) => (
-            <div className="text-sm" key={index}>
+            <div className="text-sm ml-6" key={index}>
               <SidebarItem item={child} activeParent={(activeParent)} />
             </div>
           ))}

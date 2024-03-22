@@ -9,33 +9,33 @@ export const settingsDataBuisness = [
     {
         icon: <MdOutlinePerson2/>,
         title: "My Acount",
-        path: "/myaccount",
+        path: "/userPage/settingsaccount",
     },
     {
         icon: <LuArrowUpRightFromCircle/>,
         title: "My Notifications",
-        path: "/myNotifications",
+        path: "/userPage/settingsnotifications",
     },
     {
         icon: <GiSplitArrows/>,
         title: "Connected Apps",
-        path: "/connesctedApps",
+        path: "/userPage/settingsconnect",
     },
     {
         icon: <MdFormatListBulleted/>,
         title: "Plans",
-        path: "/plans",
+        path: "/userPage/settingsplan",
     },
     {
         icon: <PiWallet/>,
         title: "Billing & Invoices",
-        path: "/billingInvoices",
+        path: "/userPage/settingsbilling",
     },
 ]
 export const settingsDataExperience = [
     {
         icon: <RiFeedbackLine/>,
         title: "Give Feedback",
-        path: "/giveFeedback",
+        path: "/userPage/settingsfeed",
     },
 ]

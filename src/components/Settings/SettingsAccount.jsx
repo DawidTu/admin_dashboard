@@ -16,7 +16,7 @@ const SettingsAccount = () => {
   };
 
   return (
-    <div className="">
+    <>
       <h1 className="text-xl font-bold">My Account</h1>
       <div className="mt-5">
         <div className="flex gap-x-3 items-center">
@@ -76,7 +76,7 @@ const SettingsAccount = () => {
             <MyButton size="small" customColor="logo" text="Set New Password" />
           </div>
         </div>
-        <div className="mt-5 border-b pb-4">
+        <div className="mt-5">
           <h1 className="text-lg">Smart Sync update for Mac</h1>
           <p className="text-xs text-gray-400 mt-1">
             With this update, online-only files will no longer appear to take up
@@ -87,22 +87,7 @@ const SettingsAccount = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="mt-5 flex float-right">
-          <span className="mr-2">
-            <MyButton size="medium" text="Cancel" />
-          </span>
-          <span>
-            <MyButton
-              size="medium"
-              backgroundColor="main-color"
-              customColor="white"
-              text="Save Chamges"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

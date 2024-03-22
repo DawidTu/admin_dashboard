@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SelectInput = ({ value, onChange }) => {
+const SelectInput = ({ value, onChange, options }) => {
   return (
-    <select value={value} onChange={onChange} className='outline-none bg-transparent py-2 w-[180px]'>
-      <option value="Italy">Italy</option>
-      <option value="USA">USA</option>
-      <option value="United Kingdom">United Kingdom</option>
+    <select value={value} onChange={onChange} className='text-xs outline-none bg-transparent py-2 px-2 w-full'>
+      {options.map((option, index) => (
+        <option key={index} value={option}>{option}</option>
+      ))}
     </select>
   );
 };
@@ -21,9 +21,16 @@ const MyInput = ({
   leftLabelText,
   rightLabelText,
   onChange,
+  dangerIcon,
+  onchange,
+  inputType,
+  options,
+  status 
 }) => {
+  const defaultInputType = "text";
+
   const getInputClasses = () => {
-    let classes = 'inline-flex items-center justify-center rounded-[4px] shadow-sm outline-none';
+    let classes = 'inline-flex items-center justify-center rounded-[4px] shadow-sm outline-none px-4';
     classes += " bg-transparent";
 
     // Nastavenie veľkosti
@@ -38,13 +45,19 @@ const MyInput = ({
     }
 
     // Nastavenie farby
-    if (color === "success") {
-      classes += " border-green-500 focus:border-green-700";
-    } else if (color === "danger") {
-      classes += " border-red-500 focus:border-red-700";
-    } else if (color === "disabled") {
+    if (color === "disabled") {
       classes += " bg-gray-400";
+    } 
+
+    // Pridanie farby borderu a textu pre stav danger alebo success
+    if (status === "danger") {
+      classes += " border border-red-500 focus:border-none";
+    } else if (status === "success") {
+      classes += " border border-green-500 focus:border-none";
+    } else {
+      classes += " text-gray-600";
     }
+
     return classes;
   };
 
@@ -53,29 +66,32 @@ const MyInput = ({
       <div className="flex justify-between text-xs">
         {upLabel && (
           <label className="text-gray-600 flex justify-between">
-            {upLabel}
+            {upLabel}<span className='text-danger ml-1'>{dangerIcon}</span>
           </label>
         )}
         {icon && <span className="text-gray-400">{icon}</span>}
       </div>
       <div className="flex items-center mt-1 relative border rounded-[4px] shadow-sm">
-        <label className="text-gray-500 pl-3 pr-1">{leftLabelText}</label>
-        {onChange !== undefined ? (
-          <SelectInput value={value} onChange={onChange} />
+        <label className={`text-gray-400 text-sm ${leftLabelText ? "pl-3 pr-1" : ""}`}>{leftLabelText}</label>
+        {inputType === "select" ? (
+          <SelectInput value={value} onChange={onChange} options={options} />
         ) : (
           <input
-            type="text"
+            onChange={onchange}
+            type={inputType || defaultInputType} 
             className={getInputClasses()}
             placeholder={placeHolder}
             value={value}
           />
         )}
-        <label className="text-gray-500 pr-3 pl-1 float-right">
+        <label className={`text-gray-400 float-right text-sm ${rightLabelText ? "pr-3 pl-1" : ""}`}>
           {rightLabelText}
         </label>
       </div>
       {downLabel && (
-        <label className="absolute text-xs text-gray-600">{downLabel}</label>
+        <label className={`absolute mt-1 text-xs ${status === "danger" ? "text-danger" : status === "success" ? "text-success" : "text-gray-600"}`}>
+        {downLabel}
+      </label>
       )}
     </div>
   );

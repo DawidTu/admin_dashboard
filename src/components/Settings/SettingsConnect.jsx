@@ -18,17 +18,17 @@ const SettingsConnect = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="text-purple-500">Utility</NavLink>
+              <NavLink>Utility</NavLink>
             </li>
             <li>
-              <NavLink activeClassName="text-purple-500">Marketing</NavLink>
+              <NavLink>Marketing</NavLink>
             </li>
             <li>
-              <NavLink activeClassName="text-purple-500">Development</NavLink>
+              <NavLink>Development</NavLink>
             </li>
           </ul>
         </div>
-        <div className="grid grid-cols-4 xl:grid-cols-3 mt-6 gap-x-6 gap-y-6 border-b pb-7">
+        <div className="grid grid-cols-1 xl:grid-cols-3 mt-6 gap-x-6 gap-y-6 border-b pb-7">
           {MyConnectedData.map((item, index) => (
             <div key={index} className="p-4 border shadow-lg w-full">
               <div className="flex items-center gap-x-3">
@@ -54,7 +54,7 @@ const SettingsConnect = () => {
         </div>
         <div className="p-4">
           <h1 className="mt-5 text-lg font-bold">Trending Categories</h1>
-          <div className="flex grid-cols-1 md:grid-cols-3 gap-x-5 justify-center">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-x-5 justify-center">
             {MyConnectedDataTrending.map((item, index) => (
               <div className="mt-5 flex w-full">
                 <div

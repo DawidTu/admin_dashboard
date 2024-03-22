@@ -131,7 +131,7 @@ const Button = () => {
         </div>
         <div className="my-8">
           <h3 className="font-semibold text-2xl">Button Groups</h3>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <div group className="my-8">
               <MyButton
                 group
@@ -156,7 +156,7 @@ const Button = () => {
                 size="medium"
               />
             </div>
-            <div group className="my-8 ml-3">
+            <div group className="my-8 md:ml-3">
               <MyButton group customColor="logo" text="Weekly" size="medium" />
               <MyButton group text="Monthly" size="medium" />
               <MyButton group text="Yearly" size="medium" />

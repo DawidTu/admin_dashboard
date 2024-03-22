@@ -141,7 +141,16 @@ const App = () => {
                 <Route path="*" element={<Error404 />} />
                 <Route path="knowledgeBase" element={<KnowledgeBase />} />
 
-               
+                {/* Authentication */}
+                <Route path="signIn" element={<SignIn />} />
+                <Route path="signUp" element={<SignUp />} />
+                <Route path="resetPassword" element={<ResetPassword />} />
+
+                {/* Oboarding */}
+                <Route path="step1" element={<Step1 />} />
+                <Route path="step2" element={<Step2 />} />
+                <Route path="step3" element={<Step3 />} />
+                <Route path="step4" element={<Step4 />} />
 
                 {/* Components */}
                 <Route path="button" element={<Button />} />
