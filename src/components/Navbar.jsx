@@ -86,7 +86,7 @@ const Navbar = () => {
 
   return (
     <div ref={ref} className="border-b fixed w-full bg-white z-50">
-      <div className="z-10 flex items-center justify-between p-2 px-5 md:mx-6 relative">
+      <div className="z-10 flex items-center justify-between p-2 px-3 md:mx-6 relative">
         <button className="text-gray-500" onClick={handleActiveMenu}>
           <AiOutlineMenu size={20}/>
         </button>

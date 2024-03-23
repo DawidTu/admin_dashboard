@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { BsThreeDots } from "react-icons/bs";
 
-const DotFilterData = ({ options, lastIndexOf }) => {
+const DotFilterData = ({ options }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -27,7 +27,7 @@ const DotFilterData = ({ options, lastIndexOf }) => {
   }, []);
 
   return (
-    <div className="inline-flex relative z-[5]" ref={dropdownRef}>
+    <div className="inline-flex relative z-[3]" ref={dropdownRef}>
       <button
         className="w-full flex justify-center items-center p-2 rounded-full focus:bg-slate-200"
         aria-label="Select option"

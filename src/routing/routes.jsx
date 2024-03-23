@@ -50,12 +50,12 @@ import Button from "../pages/Components/Button";
 import InputForm from "../pages/Components/InputForm";
 import Dropdown from "../pages/Components/Dropdown";
 import UsersPage from "./UsersPage";
-import SettingsAccount from "../components/Settings/SettingsAccount";
-import SettingsNotification from "../components/Settings/SettingsNotification";
-import SettingsConnect from "../components/Settings/SettingsConnect";
-import SettingsPlans from "../components/Settings/SettingsPlans";
-import SettingsBilling from "../components/Settings/SettingsBilling";
-import SettingsFeed from "../components/Settings/SettingsFeed";
+import SettingsAccount from "../pages/Settings/SettingsAccount";
+import SettingsNotification from "../pages/Settings/SettingsNotification";
+import SettingsConnect from "../pages/Settings/SettingsConnect";
+import SettingsPlans from "../pages/Settings/SettingsPlans";
+import SettingsBilling from "../pages/Settings/SettingsBilling";
+import SettingsFeed from "../pages/Settings/SettingsFeed";
 import Icons from "../pages/Icons";
 import BadgePage from "../pages/BadgePage";
 

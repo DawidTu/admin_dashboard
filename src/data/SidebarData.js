@@ -351,7 +351,7 @@ export const SidebarData = [
       },
       {
         title: "Components",
-        path: "/button",
+        path: "/button/:id",
         icon: <IoLogoWebComponent size={iconSize} />,
         iconClosed: <RiArrowDownSLine/>,
         iconOpened: <RiArrowUpSLine/>,

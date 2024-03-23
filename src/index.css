@@ -32,12 +32,12 @@ body {
 }
 .sidebar-closed {
   width: 58px;
-  transition: width 0.3s ease; /* Alebo transform, podľa potreby */
+  transition: width 0.3s ease; 
 }
 .sidebar-open {
   width: 260px;
   overflow: hidden;
-  transition: width 0.3s ease; /* Alebo transform, podľa potreby */
+  transition: width 0.3s ease; 
 }
 .sidebar::-webkit-scrollbar {
   width: 0;
