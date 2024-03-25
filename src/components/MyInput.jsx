@@ -2,7 +2,7 @@ import React from 'react';
 
 const SelectInput = ({ value, onChange, options }) => {
   return (
-    <select value={value} onChange={onChange} className='text-xs outline-none bg-transparent py-2 px-2 w-full'>
+    <select value={value} onChange={onChange} className='text-xs outline-none bg-transparent py-2 px-2 mr-2 w-full'>
       {options.map((option, index) => (
         <option key={index} value={option}>{option}</option>
       ))}

@@ -27,7 +27,7 @@ const Step3 = () => {
         </div>
 
         <div className="w-full">
-          <div className="mt-24 mx-auto w-full">
+          <div className="mt-20 mx-auto w-full">
             <ActiveStepProvider>
               <StepProgressbar />
             </ActiveStepProvider>

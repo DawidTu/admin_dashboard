@@ -3,9 +3,7 @@ import authDecoration from "../../data/svg/images/auth-decoration.png";
 import { Link } from "react-router-dom";
 import logo from "../../data/svg/logo.svg";
 import MyButton from "../../components/MyButton";
-import StepProgressbar, {
-  ActiveStepProvider,
-} from "../../components/StepProgressbar";
+import StepProgressbar, {ActiveStepProvider} from "../../components/StepProgressbar";
 import ChackBoxForm from "../Components/ChackBoxForm";
 
 const Step1 = () => {

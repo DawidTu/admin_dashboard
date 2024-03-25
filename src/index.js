@@ -4,12 +4,15 @@ import "./index.css";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { RouterProvider } from "react-router-dom";
 import router from "./routing/routes";
+import { ImageProvider } from "./contexts/ImageContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ContextProvider>
-      <RouterProvider router={router}/>
+      <ImageProvider>
+        <RouterProvider router={router}/>
+      </ImageProvider>
     </ContextProvider>
   </React.StrictMode>
 );

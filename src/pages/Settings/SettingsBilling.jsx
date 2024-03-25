@@ -33,7 +33,7 @@ const SettingsBilling = () => {
             <div>
               <h2 className="font-semibold text-xl">{item.h1}</h2>
               <div>
-                <div className="flex my-5 justify-between w-[720px]">
+                <div className="flex my-5 justify-between w-[74%] xl:w-[58%]">
                   <div className="flex gap-x-16 text-sm">
                     <p className="text-gray-300 uppercase text-xs">{item.h2Year}</p>
                     <p className="text-gray-300 uppercase text-xs">{item.h2Plan}</p>

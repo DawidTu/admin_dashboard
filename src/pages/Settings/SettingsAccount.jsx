@@ -3,10 +3,31 @@ import Arrow1 from "../../data/svg/arrow1.svg";
 import MyInput from "../../components/MyInput";
 import SwitchButton from "../../components/SwitchButton";
 import MyButton from "../../components/MyButton";
+import { useImageContext } from "../../contexts/ImageContext";
 
 const SettingsAccount = () => {
   const [inputValue, setInputValue] = useState("amin@acmeinc.com");
+  const { setImage } = useImageContext();
+  const [imageFile, setImageFile] = useState(null);
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImageFile(file); 
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleButtonClick = () => {
+    const fileInput = document.getElementById("upload");
+    if (fileInput) {
+      fileInput.click();
+    }
+  };
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -21,14 +42,28 @@ const SettingsAccount = () => {
       <div className="mt-5">
         <div className="flex gap-x-3 items-center">
           <div className="w-16 h-16 rounded-full bg-sidepanel">
-            <img className="p-4" src={Arrow1} alt="user-profile" />
+            <div className="flex items-center gap-x-5">
+              <img
+                className="p-4"
+                src={imageFile ? URL.createObjectURL(imageFile) : Arrow1}
+                alt={imageFile ? "user-profile" : "arrow"}
+              />
+              <MyButton
+                backgroundColor="main-color"
+                customColor="white"
+                size="xs"
+                text="Change"
+                onClick={handleButtonClick}
+              />
+            </div>
+            <input
+              type="file"
+              id="upload"
+              accept="image/*"
+              className="hidden"
+              onChange={handleImageChange}
+            />
           </div>
-          <MyButton
-            backgroundColor="main-color"
-            customColor="white"
-            size="xs"
-            text="Change"
-          />
         </div>
         <div className="mt-5 flex-wrap">
           <h1 className="text-lg">Buisness Profile</h1>
@@ -57,10 +92,7 @@ const SettingsAccount = () => {
             officia.
           </p>
           <div className="mt-3 flex items-center gap-x-3 w-[290px]">
-            <MyInput
-              size="small"
-              placeHolder={inputValue}
-            />
+            <MyInput size="small" placeHolder={inputValue} />
             <span className="mt-1">
               <MyButton size="medium" text="Change" customColor="logo" />
             </span>

@@ -1,18 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RiSearch2Line } from "react-icons/ri";
 import { PiChatsCircleFill } from "react-icons/pi";
 import { BsExclamationCircleFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
 import Arrow1 from "../data/svg/arrow1.svg";
+
 import Search from "./Search";
 import Chat from "./Chat";
 import Help from "./Help";
 import UserProfile from "./UserProfile";
+
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
-import { useRef } from "react";
+import { useImageContext } from "../contexts/ImageContext";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
@@ -32,6 +33,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
+  const { imageSrc } = useImageContext();
+  const ref = useRef();
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
   const {
     currentColor,
     activeMenu,
@@ -45,11 +49,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
-
     handleResize();
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -80,17 +81,13 @@ const Navbar = () => {
     };
   }, []);
 
-  const ref = useRef();
-
-  const handleActiveMenu = () => setActiveMenu(!activeMenu);
-
   return (
     <div ref={ref} className="border-b fixed w-full bg-white z-50">
       <div className="z-10 flex items-center justify-between p-2 px-3 md:mx-6 relative">
         <button className="text-gray-500" onClick={handleActiveMenu}>
-          <AiOutlineMenu size={20}/>
+          <AiOutlineMenu size={20} />
         </button>
-        
+
         <div className="flex gap-x-5 items-center">
           <div>
             <NavButton
@@ -124,7 +121,11 @@ const Navbar = () => {
               onClick={() => handleClick("userProfile")}
             >
               <div className="justify-center items-center rounded-full bg-sidepanel">
-                <img className="p-2 w-9 h-9" src={Arrow1} alt="user-profile" />
+                <img
+                  className="p-2 w-9 h-9"
+                  src={imageSrc ? imageSrc : Arrow1}
+                  alt={imageSrc ? "user-profile" : "arrow"}
+                />
               </div>
               <p>
                 <span className="text-sidebar-text text-14">Acme</span>{" "}
