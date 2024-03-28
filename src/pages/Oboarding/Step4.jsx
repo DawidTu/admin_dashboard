@@ -32,14 +32,14 @@ const Step4 = () => {
               <StepProgressbar />
             </ActiveStepProvider>
           </div>
-          <div className="mt-32 mx-auto w-[450px]">
+          <div className="mt-32 mx-auto w-full md:w-[450px]">
             <div className="w-full">
               <div className="mx-auto flex justify-center items-center bg-green-200 rounded-full w-14 h-14">
                 <img className="h-6" src={chack} alt="" />
               </div>
             </div>
 
-            <h3 className="h3 font-semibold text-left mt-8">
+            <h3 className="h3 font-semibold text-center md:text-left mt-8">
               Nice to have you, Acme Inc. 🙌
             </h3>
 

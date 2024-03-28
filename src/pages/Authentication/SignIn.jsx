@@ -32,7 +32,7 @@ const SignIn = () => {
         </Link>
 
         <div className="w-full">
-          <div className="mt-24 2xl:mt-44 mx-auto w-[400px]">
+          <div className="mt-24 2xl:mt-44 mx-auto w-full md:w-[400px]">
             <h3 className="h3 font-semibold text-left">Welcome back! ✨</h3>
             <div className="mt-10 border-b pb-6">
               <form onSubmit={hendleSubmit}>

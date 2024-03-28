@@ -71,7 +71,7 @@ const SettingsAccount = () => {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit.
           </p>
-          <div className="mt-10 flex gap-x-3">
+          <div className="mt-10 flex flex-col gap-y-3 md:flex-row gap-x-3">
             <MyInput
               size="small"
               upLabel="Buisness Name"

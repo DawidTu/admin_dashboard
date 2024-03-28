@@ -18,7 +18,7 @@ const SettingsBilling = () => {
           {settingsBillingData.map((item, index) => (
             <div key={index}>
               <h2 className="font-semibold text-xl">{item.h1}</h2>
-              <div className="border-b mb-2 flex justify-between my-3 py-2">
+              <div className="border-b mb-2 flex flex-wrap justify-between my-3 py-2">
                 <h2 className="text-sm">{item.left}</h2>
                 <div className="flex gap-x-5">
                   <h2 className="text-sm text-gray-500">{item.right}</h2>
@@ -33,18 +33,22 @@ const SettingsBilling = () => {
             <div>
               <h2 className="font-semibold text-xl">{item.h1}</h2>
               <div>
+                {" "}
                 <div className="flex my-5 justify-between w-[74%] xl:w-[58%]">
                   <div className="flex gap-x-16 text-sm">
-                    <p className="text-gray-300 uppercase text-xs">{item.h2Year}</p>
-                    <p className="text-gray-300 uppercase text-xs">{item.h2Plan}</p>
+                    <p className="text-gray-300 uppercase text-xs">
+                      {item.h2Year}
+                    </p>
+                    <p className="text-gray-300 uppercase text-xs">
+                      {item.h2Plan}
+                    </p>
                   </div>
-                  <p className="text-xs text-gray-300 uppercase">{item.h2Amount}</p>
+                  <p className="text-xs text-gray-300 uppercase">
+                    {item.h2Amount}
+                  </p>
                 </div>
               </div>
-              <div
-                className="flex justify-between border-b pb-2"
-                key={index}
-              >
+              <div className="flex justify-between border-b pb-2" key={index}>
                 <div className="flex gap-x-16 text-sm">
                   <p>{item.year}</p>
                   <p className="text-gray-500">{item.plan}</p>

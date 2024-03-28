@@ -30,7 +30,7 @@ const Step1 = () => {
               <StepProgressbar />
             </ActiveStepProvider>
           </div>
-          <div className="mt-20 mx-auto w-[450px]">
+          <div className="mt-20 mx-auto w-full md:w-[450px]">
             <h3 className="h3 font-semibold text-left">
               Tell us what’s your situation ✨
             </h3>

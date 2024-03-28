@@ -21,7 +21,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       type="button"
       onClick={() => customFunc()}
       style={{ color }}
-      className="relative text-lg rounded-full p-2 hover:bg-slate-300 bg-slate-200"
+      className="relative text-lg rounded-full p-2.5 hover:bg-slate-300 bg-slate-200"
     >
       <span
         style={{ background: dotColor }}
@@ -85,16 +85,16 @@ const Navbar = () => {
     <div ref={ref} className="border-b fixed w-full bg-white z-50">
       <div className="z-10 flex items-center justify-between p-2 px-3 md:mx-6 relative">
         <button className="text-gray-500" onClick={handleActiveMenu}>
-          <AiOutlineMenu size={20} />
+          <AiOutlineMenu size={25} />
         </button>
 
-        <div className="flex gap-x-5 items-center">
+        <div className="flex gap-x-3 items-center">
           <div>
             <NavButton
               title="Search"
               customFunc={() => handleClick("search")}
               color={currentColor}
-              icon={<RiSearch2Line />}
+              icon={<RiSearch2Line size={20}/>}
             />
           </div>
           <div>
@@ -103,7 +103,7 @@ const Navbar = () => {
               dotColor="red"
               customFunc={() => handleClick("chat")}
               color={currentColor}
-              icon={<PiChatsCircleFill />}
+              icon={<PiChatsCircleFill  size={20}/>}
             />
           </div>
           <div>
@@ -111,7 +111,7 @@ const Navbar = () => {
               title="Help"
               customFunc={() => handleClick("help")}
               color={currentColor}
-              icon={<BsExclamationCircleFill />}
+              icon={<BsExclamationCircleFill  size={20}/>}
             />
           </div>
           <div className="border h-7 mt-2"></div>

@@ -14,8 +14,8 @@ const SettingsNotification = () => {
             <div key={index}>
               <h1 className="text-lg font-bold mb-3">{item.mainTitle}</h1>
               <div className="flex justify-between items-center mb-5">
-                <div>
-                  <h1 className="text-sm font-semibold">{item.title}</h1>
+                <div className="pr-12">
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
                   <p className="text-xs text-gray-400">{item.text}</p>
                 </div>
                 <div>{item.icon}</div>

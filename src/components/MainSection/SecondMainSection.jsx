@@ -14,7 +14,7 @@ const SecondMainSection = () => {
         return (
           <div className="w-full border p-5 bg-box" key={index}>
             <h2 className="w-full border-b pb-3 font-bold">{data.h2}</h2>
-            <div className="flex mt-5 gap-x-8">
+            <div className="flex flex-wrap mt-5 gap-x-8">
               <div className="flex items-center">
                 <span className="block w-3 h-3 rounded-full mr-2 border-[3px] border-[#60a5fa]" />
                 <span className="mr-2 text-3xl font-bold">{data.dollar}</span>

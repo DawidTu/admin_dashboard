@@ -33,14 +33,14 @@ const Step2 = () => {
               <StepProgressbar />
             </ActiveStepProvider>
           </div>
-          <div className="mt-20 mx-auto w-[450px]">
+          <div className="mt-20 mx-auto w-full md:w-[450px]">
             <h3 className="h3 font-semibold text-left">
               Tell us about your company ✨
             </h3>
             <div className="mt-10">
               <ChackBoxForm2 />
               <div className="flex items-center justify-between mt-8">
-                <div>
+                <div className="mr-3 md:mr-0 text-center md:text-left">
                   <div className="text-slate-800 dark:text-slate-100 text-sm">
                     💸 Lorem ipsum is place text commonly?
                   </div>

@@ -14,7 +14,7 @@ const ResetPassword = () => {
         </Link>
 
         <div className="w-full">
-          <div className="mt-48 2xl:mt-64 mx-auto w-[400px]">
+          <div className="mt-48 2xl:mt-64 mx-auto w-full md:w-[400px]">
             <h3 className="h3 font-semibold text-left">
               Reset your Password✨
             </h3>
