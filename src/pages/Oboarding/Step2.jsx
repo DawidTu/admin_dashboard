@@ -28,7 +28,7 @@ const Step2 = () => {
         </div>
 
         <div className="w-full h-screen flex flex-col items-center mt-10">
-          <div className="mt-24 mx-auto w-full">
+          <div className="mt-8 md:mt-24 mx-auto w-full">
             <ActiveStepProvider>
               <StepProgressbar />
             </ActiveStepProvider>

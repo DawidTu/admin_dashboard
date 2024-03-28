@@ -3,7 +3,7 @@ import { TableData } from "../../data/TableData";
 
 const TableComponent = () => {
   return (
-    <table className="w-full">
+    <table className="w-full bg-white p-3">
       <thead className="uppercase text-xs xl:text-sm text-sidebar-text bg-gray-100 h-10">
         <tr>
           <th className="text-left pl-4">

@@ -37,12 +37,12 @@ const DotFilterData = ({ options }) => {
         <BsThreeDots size={18} />
       </button>
       {isOpen && (
-        <div className="absolute top-8 w-32 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded mt-1">
+        <div className="absolute right-1 md:right-0 top-8 w-32 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded mt-1">
           <div className="text-sm px-4 pt-2">
             {options.map((option, index) => (
               <button
                 key={index}
-                className="mb-2 w-full text-left focus:outline-none"
+                className="mb-2 w-full text-left"
                 onClick={() => handleOptionChange(option)}
               >
                 <span className="text-[13px] text-gray-600">{option}</span>

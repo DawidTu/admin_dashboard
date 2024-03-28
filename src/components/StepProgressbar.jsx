@@ -63,7 +63,7 @@ const StepProgressbar = () => {
 
   return (
     <div>
-      <div className="w-4/5 mx-auto relative">
+      <div className="w-full md:w-4/5 mx-auto relative">
         <div
           className={`h-[2px] bg-gray-300 absolute top-1/2 left-0 right-0 transform -translate-y-1/2 transition-width duration-300 ease-in-out step-${activeStep}`}
         />

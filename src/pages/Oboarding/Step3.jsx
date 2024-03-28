@@ -32,7 +32,7 @@ const Step3 = () => {
               <StepProgressbar />
             </ActiveStepProvider>
           </div>
-          <div className="mt-20 mx-auto w-full md:w-[450px]">
+          <div className="mt-12 md:mt-20 mx-auto w-full md:w-[450px]">
             <h3 className="h3 font-semibold text-left">
               Company information ✨
             </h3>
