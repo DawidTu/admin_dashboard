@@ -102,7 +102,7 @@ const Sidebar = () => {
 
           <div
             onClick={toggleSidebar}
-            className={`text-sidebar-text my-6 text-[23px] ${
+            className={`text-sidebar-text my-6 text-[23px] cursor-pointer ${
               isSidebarOpen ? "float-right px-4" : "float-left px-3"
             }`}
           >

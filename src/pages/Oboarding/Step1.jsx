@@ -51,8 +51,8 @@ const Step1 = () => {
           </div>
         </div>
       </div>
-      <div className="hidden xl:block xl:w-2/4 xl:h-screen xl:overflow-hidden">
-        <img className="w-screen items-center" src={onboarding} alt="" />
+      <div className="hidden xl:block xl:w-2/4">
+        <img className="w-full fill object-cover  xl:h-screen xl:overflow-hidden" src={onboarding} alt="" />
       </div>
       <div className="hidden xl:block xl:absolute xl:left-[46.3%] xl:top-[46%]">
         <img className="h-48 w-48" src={authDecoration} alt="" />
