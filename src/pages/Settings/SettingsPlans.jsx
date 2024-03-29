@@ -86,7 +86,7 @@ const SettingsPlans = () => {
           ))}
         </div>
         <div className="mt-6">
-          <div className="w-full p-5 bg-[#eef2ff] rounded-sm flex flex-wrap justify-center md:justify-between">
+          <div className="w-full p-5 planbunner rounded-sm flex flex-wrap justify-center md:justify-between">
             <h1 className="mb-2 md:mb-0 text-lg font-semibold">
               Looking for different configurations?
             </h1>

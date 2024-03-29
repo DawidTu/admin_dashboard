@@ -3,7 +3,7 @@ import Arrow1 from "../../data/svg/arrow1.svg";
 
 const MainDashBanner = () => {
   return (
-    <div className="mt-16 relative md:overflow-hidden bg-indigo-200 dark:text-gray-200 dark:bg-secondary-dark-bg rounded-sm w-full inline-block">
+    <div className="mt-16 relative md:overflow-hidden main-banner rounded-sm w-full inline-block">
       <div className="p-3 md:p-5 flex flex-col">
         <h3 className="text-[22px] font-semibold lg:text-3xl">
           Good afternoon, Acme Inc. 👋

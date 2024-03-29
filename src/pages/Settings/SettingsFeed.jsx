@@ -12,7 +12,7 @@ const SettingsFeed = () => {
         </div>
         <div>
           <h1 className="text-xl font-semibold my-6">Tell us in words</h1>
-          <textarea className="border hover:border-gray-300 w-full p-3 rounded outline-none" rows="4" cols="5" placeholder="I really enjoy..."/>
+          <textarea className="border hover:border-gray-300 main-content w-full p-3 rounded outline-none" rows="4" cols="5" placeholder="I really enjoy..."/>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const FirstMainSection = () => {
     <div className="flex flex-wrap xl:flex-nowrap gap-y-7 xl:gap-x-7">
       {DashboardData.map((data, index) => {
         return (
-          <div key={index} className="w-full border p-5 bg-box">
+          <div key={index} className="w-full border p-5 main-content">
             <div className="flex items-center justify-between">{data.img}<DotFilterData options={options4}/></div>
             <h2 className="mt-2 text-xl font-bold">{data.h2}</h2>
             <div className="my-2 uppercase text-sidebar-text text-sm">
@@ -22,7 +22,7 @@ const FirstMainSection = () => {
                 {data.bage}
               </span>
             </div>
-            <div className="mt-2 w-full bg-gray-100 h-20">
+            <div className="mt-2 w-full sub-text h-20">
               <LineChart />
             </div>
           </div>

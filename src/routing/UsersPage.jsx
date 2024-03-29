@@ -7,7 +7,7 @@ const UsersPage = () => {
   return (
     <div className="mt-16 mx-auto min-h-screen">
       <h3 className="h3 font-semibold">Account Settings ✨</h3>
-      <div className="bg-white mt-10 rounded-sm flex flex-col md:flex-row shadow-xl">
+      <div className="nav-bar mt-10 rounded-sm flex flex-col md:flex-row shadow-xl">
         <div className="border-b py-5 px-3 md:border-r md:p-3 md:w-[230px]">
           <AccountNav />
         </div>

@@ -12,7 +12,7 @@ const FourthMainSection = () => {
     <div className="flex flex-wrap xl:flex-nowrap gap-y-7 gap-x-7 mt-8">
       {DashboardDataSales.map((data, index) => {
         return (
-          <div className="w-full border p-5 bg-box" key={index}>
+          <div className="w-full border p-5 main-content" key={index}>
             <h2 className="w-full border-b pb-5 font-bold">{data.h2}</h2>
             <div className="flex mt-5 gap-x-8">
               <div className="flex w-full justify-between items-center">
@@ -42,7 +42,7 @@ const FourthMainSection = () => {
       })}
       {DashboardDataSalesRefunds.map((data, index) => {
         return (
-          <div className="w-full border p-5 bg-box" key={index}>
+          <div className="w-full border p-5 main-content" key={index}>
             <h2 className="w-full flex items-center gap-x-3 border-b pb-5 font-bold">
               {data.h2}
               <span className="text-sidebar-text">

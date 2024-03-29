@@ -12,7 +12,7 @@ const SecondMainSection = () => {
     <div className="flex flex-wrap xl:flex-nowrap gap-y-7 gap-x-7 mt-8">
       {DashboardDataDirect.map((data, index) => {
         return (
-          <div className="w-full border p-5 bg-box" key={index}>
+          <div className="w-full border p-5 main-content" key={index}>
             <h2 className="w-full border-b pb-3 font-bold">{data.h2}</h2>
             <div className="flex flex-wrap mt-5 gap-x-8">
               <div className="flex items-center">
@@ -34,7 +34,7 @@ const SecondMainSection = () => {
       })}
       {DashboardDataValue.map((data, index) => {
         return (
-          <div className="w-full border p-5 bg-box" key={index}>
+          <div className="w-full border p-5 main-content" key={index}>
             <div className="flex">
               <h2 className="flex items-center gap-x-3 w-full border-b pb-3 font-bold">
                 {data.h2}

@@ -3,7 +3,7 @@ import { NotificationsData } from "../data/NotificationsData";
 
 const Chat = () => {
   return (
-    <div className="nav-item fixed right-1 md:right-[100px] xl:right-[275px] top-[54px] bg-white border dark:bg-[#42464D] p-4 rounded-sm w-96">
+    <div className="nav-item fixed right-1 md:right-[100px] xl:right-[275px] top-[54px] main-content border p-4 rounded-sm w-96">
       <h3 className="text-sidebar-text uppercase text-sm">Notification</h3>
       <div>
         {NotificationsData.map((data, index) => {

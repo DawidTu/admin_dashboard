@@ -30,7 +30,7 @@ const Dashboard = () => {
         </div>
         <div className="flex gap-x-2 md:gap-x-4">
           <Filter options={options3} />
-          <div className="bg-white border border-gray-200 py-[8px] px-2 min-w-64 rounded-md hover:border-gray-400 cursor-pointer">
+          <div className="main-content border py-[8px] px-2 min-w-64 rounded-md cursor-pointer">
             <MainDashCalendar />
           </div>
           {window.innerWidth <= 768 ? (

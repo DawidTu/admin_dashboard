@@ -31,7 +31,7 @@ const Filter = ({ options }) => {
   return (
     <div className="inline-flex relative z-[5]" ref={dropdownRef}>
       <button
-        className="w-full bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-slate-500 flex justify-center items-center p-2 rounded-[4px] "
+        className="w-full main-content dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-slate-500 flex justify-center items-center p-2 rounded-[4px] "
         aria-label="Select option"
         aria-haspopup="true"
         onClick={toggleDown}
@@ -39,7 +39,7 @@ const Filter = ({ options }) => {
         <IoFilter size={18} />
       </button>
       {isOpen && (
-        <div className="absolute top-10 w-56 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded mt-1">
+        <div className="absolute top-10 w-56 main-content border rounded mt-1">
           <div className="text-sm px-4 py-2">
             <div className="font-semibold mt-2 mb-4 uppercase text-gray-400 text-xs">
               Filters

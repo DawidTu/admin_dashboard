@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 const FifthMainSection = () => {
   return (
     <div className="flex flex-wrap xl:flex-nowrap gap-y-7 gap-x-7 mt-8">
-      <div className="w-full border p-5 bg-box">
+      <div className="w-full border p-5 main-content">
         <h2 className="w-full border-b pb-2 font-bold">Recent Activity</h2>
-        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase w-full font-bold sub-text p-2 mt-3">
           Today
         </h3>
         {DashboardDataRecentActivity.map((data, index) => {
@@ -43,7 +43,7 @@ const FifthMainSection = () => {
             </div>
           );
         })}
-        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase w-full font-bold sub-text p-2 mt-3">
           Yesterday
         </h3>
         {DashboardDataRecentActivityYesterday.map((data, index) => {
@@ -76,9 +76,9 @@ const FifthMainSection = () => {
         })}
       </div>
 
-      <div className="w-full border p-5 bg-box">
+      <div className="w-full border p-5 main-content">
         <h2 className="w-full border-b pb-2 font-bold">Income/Expenses</h2>
-        <h3 className="uppercase text-sidebar-text w-full font-bold bg-gray-100 p-2 mt-3">
+        <h3 className="uppercase w-full font-bold sub-text p-2 mt-3">
           Today
         </h3>
         {DashboardDataIncome.map((data, index) => {

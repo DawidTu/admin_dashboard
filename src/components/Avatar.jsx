@@ -7,12 +7,12 @@ import { FaPlus } from "react-icons/fa6";
 
 const Avatar = () => {
   return (
-    <div className='w-full flex h-10 w-10'>
+    <div className='flex h-10 w-10'>
         <img className='rounded-full' src={avatar1} alt="" />
         <img className='rounded-full -m-1 h-10 mt-0.5' src={avatar2} alt="" />
         <img className='rounded-full -m-1 h-10 mt-0.5' src={avatar3} alt="" />
         <img className='rounded-full -m-1 h-10 mt-0.5' src={avatar4} alt="" />
-        <button className="bg-white -m-1 h-10 mt-0.5 border text-xl border-gray-200 p-2 text-logo rounded-full hover:border-gray-400 cursor-pointer"><FaPlus/></button>
+        <button className="main-content -m-1 h-10 mt-0.5 border text-xl p-2 text-logo rounded-full cursor-pointer"><FaPlus/></button>
     </div>
   )
 }

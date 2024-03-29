@@ -45,6 +45,9 @@ body {
 .container {
   margin-left: 260px;
 }
+.dark {
+  color: #ffffff; 
+}
 @keyframes spin {
   to { transform: rotate(360deg); }
 }

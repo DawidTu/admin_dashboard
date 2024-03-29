@@ -31,7 +31,7 @@ const MainDashCalendar = () => {
 
   return (
     <div className="relative">
-      <div className="flex items-center gap-2 text-left px-3 text-sm text-gray-500 bg-white w-full cursor-pointer">
+      <div className="flex items-center gap-2 text-left px-3 text-sm text-gray-500 main-content w-full cursor-pointer">
         <span className="text-lg">
           <IoIosCalendar />
         </span>
@@ -46,7 +46,7 @@ const MainDashCalendar = () => {
             onChange={handleDateChange}
             selectRange
             value={selectedStartDate && selectedEndDate}
-            className="shadow-lg bg-white border border-gray-300 rounded-md p-4 text-gray-500"
+            className="shadow-lg main-content border border-gray-300 rounded-md p-4 text-gray-500"
           />
         </div>
       )}

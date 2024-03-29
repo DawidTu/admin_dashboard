@@ -55,9 +55,10 @@ const SettingsBilling = () => {
                 </div>
 
                 <p className="text-sm text-gray-500">{item.amount}</p>
-                <div className="text-logo">
-                  <button className="mr-3">{item.btn1}</button>
-                  <button>{item.btn2}</button>
+                <div className="text-logo flex">
+                  <button className="mr-2">{item.btn1}</button>
+                  <div className="border rotate"></div>
+                  <button className="ml-2">{item.btn2}</button>
                 </div>
               </div>
             </div>

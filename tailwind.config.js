@@ -20,9 +20,7 @@ module.exports = {
         "main-dark-bg": "#20232A",
         "secondary-dark-bg": "#33373E",
         "light-gray": "#F7F7F7",
-        "half-transparent": "rgba(0, 0, 0, 0.5)",
-        "sidepanel": "rgb(30, 41, 59)",
-        "box": "#fff",
+        "sidepanel": "#1e293b",
       },
       textColor: {
         "sidebar-text": "#667488",
@@ -41,5 +39,69 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          ".main-banner": {
+            "background-color": "#C7D2FE",
+          },
+          ".nav-bar": {
+            "background-color": "#FFFFFF",
+            "border-b": "#e5e7eb",
+          },
+          ".main-content": {
+            "background-color": "#FFFFFF",
+            "border-color": "#E2E8F0",
+          },
+          ".sub-text": {
+            "background-color": "#f3f4f6",
+          },
+          ".navbutton": {
+            "background-color": "#F1F5F9",
+          },
+          ".navuserprofile": {
+            "background-color": "#334155",
+          },
+          ".userprofile": {
+            "background-color": "#FFFFFF",
+          },
+          ".planbunner": {
+            "background-color": "#eef2ff",
+          },
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          ".main-banner": {
+            "background-color": "#6366f1",
+          },
+          ".nav-bar": {
+            "background-color": "#182235",
+            "border-b": "#334155"
+          },
+          ".main-content": {
+            "background-color": "#1e293b",
+            "border-color": "#334155",
+          },
+          ".sub-text": {
+            "background-color": "#64748b",
+          },
+          ".navbutton": {
+            "background-color": "#334155",
+          },          
+          ".navuserprofile": {
+            "background-color": "#334155",
+          },          
+          ".userprofile": {
+            "background-color": "#1e293b",
+          },          
+          ".planbunner": {
+            "background-color": "#6366f1",
+          },          
+        },
+      },
+    ],
+  },
 };
